@@ -37,10 +37,14 @@ Gọi `corpus-librarian` với thư mục Drive mục tiêu. Nó xuất `_worksp
 Với mỗi tài liệu đọc được trong catalog, spawn **một** `text-researcher` chạy nền song song:
 
 - Gọi `Agent(subagent_type="text-researcher", model="opus", run_in_background=true)` cho từng tài liệu.
-- Yêu cầu mỗi instance đọc tài liệu (qua Drive ID) và ghi bản phân tích ra `_workspace/docs/{Dxx}.md` theo định dạng mặc định của text-researcher (TL;DR → luận điểm + trích dẫn → số liệu → lưu ý).
+- Yêu cầu mỗi instance đọc tài liệu và **trả về** bản phân tích theo định dạng mặc định của text-researcher (TL;DR → luận điểm + trích dẫn → số liệu → lưu ý).
 - **Kiểm soát lô:** kho lớn thì chạy theo lô 5–8 tài liệu/lần để tránh quá tải; thu kết quả từng lô rồi tiếp lô sau.
 
 > Fan-out vì các tài liệu độc lập, phân tích song song nhanh hơn nhiều. Mỗi instance chỉ lo đúng một tài liệu.
+
+> **Quan trọng — text-researcher là agent CHỈ ĐỌC** (tools: Read, Glob, Grep, WebFetch, WebSearch; không có Write). Vì vậy nó **không tự ghi** `_workspace/docs/{Dxx}.md` — nó **trả bản phân tích về orchestrator**, và **orchestrator ghi file** (return-value based). Đừng giao việc ghi cho agent không có quyền ghi. (Cách khác: cấp thêm `Write` cho một bản text-researcher chuyên dùng cho corpus, nhưng giữ bản gốc chỉ-đọc để an toàn khi phân tích file lẻ.)
+
+> **Đọc Google Drive trong fan-out:** nếu tên server MCP Drive không khớp `tools:` của text-researcher, orchestrator đọc nội dung Drive trước, lưu tạm `_workspace/source/{Dxx}.*`, rồi giao text-researcher đọc bản cục bộ đó.
 
 ## Phase 3: Tổng hợp (knowledge-synthesizer)
 
