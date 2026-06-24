@@ -1,2 +1,8 @@
 .DS_Store
 .claude/
+
+# Second Brain runtime artifacts (private user data — không commit)
+_workspace/source/
+_workspace/docs/
+_workspace/brain/
+_workspace/00_librarian_catalog.md
