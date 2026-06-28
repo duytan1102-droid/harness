@@ -1,0 +1,48 @@
+{
+  "customers": [
+    {
+      "id": "KH001",
+      "name": "Nguyễn Văn An",
+      "cccd": "001234567890",
+      "phone": "0901234567",
+      "address": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+      "email": "nguyenvanan@email.com",
+      "occupation": "Kinh doanh",
+      "income_monthly": 25000000,
+      "credit_score": 780,
+      "status": "active",
+      "created_at": "2024-01-15",
+      "notes": "Khách hàng VIP, lịch sử trả nợ tốt"
+    },
+    {
+      "id": "KH002",
+      "name": "Trần Thị Bích",
+      "cccd": "038456789012",
+      "phone": "0912345678",
+      "address": "45 Đường Trần Hưng Đạo, Quận 5, TP.HCM",
+      "email": "trантhibich@email.com",
+      "occupation": "Công nhân viên chức",
+      "income_monthly": 12000000,
+      "credit_score": 650,
+      "status": "active",
+      "created_at": "2024-03-20",
+      "notes": ""
+    },
+    {
+      "id": "KH003",
+      "name": "Lê Minh Tuấn",
+      "cccd": "079123456789",
+      "phone": "0933456789",
+      "address": "78 Đường Nguyễn Huệ, TP. Đà Nẵng",
+      "email": "leminhTuân@email.com",
+      "occupation": "Nông nghiệp",
+      "income_monthly": 8000000,
+      "credit_score": 590,
+      "status": "active",
+      "created_at": "2024-05-10",
+      "notes": "Vay vốn nông nghiệp, cần theo dõi sát"
+    }
+  ],
+  "last_updated": "2025-06-28",
+  "total_count": 3
+}

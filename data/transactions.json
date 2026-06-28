@@ -1,0 +1,48 @@
+{
+  "transactions": [
+    {
+      "id": "GD001",
+      "loan_id": "VV001",
+      "customer_id": "KH001",
+      "type": "payment",
+      "amount": 15750000,
+      "principal_amount": 11083333,
+      "interest_amount": 4666667,
+      "payment_date": "2025-06-01",
+      "recorded_by": "CBTD001",
+      "method": "Chuyển khoản",
+      "reference": "CK20250601001",
+      "notes": ""
+    },
+    {
+      "id": "GD002",
+      "loan_id": "VV002",
+      "customer_id": "KH002",
+      "type": "payment",
+      "amount": 4291667,
+      "principal_amount": 1541667,
+      "interest_amount": 2750000,
+      "payment_date": "2025-06-15",
+      "recorded_by": "CBTD001",
+      "method": "Tiền mặt",
+      "reference": "TM20250615001",
+      "notes": ""
+    },
+    {
+      "id": "GD003",
+      "loan_id": "VV001",
+      "customer_id": "KH001",
+      "type": "disbursement",
+      "amount": 500000000,
+      "principal_amount": 500000000,
+      "interest_amount": 0,
+      "payment_date": "2024-02-01",
+      "recorded_by": "CBTD001",
+      "method": "Chuyển khoản",
+      "reference": "GT20240201001",
+      "notes": "Giải ngân lần 1 - toàn bộ hợp đồng"
+    }
+  ],
+  "last_updated": "2025-06-28",
+  "total_count": 3
+}
