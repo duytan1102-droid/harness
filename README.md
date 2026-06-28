@@ -297,6 +297,34 @@ Key finding: effectiveness scales with task complexity — the harder the task, 
 - Cross-runtime scaffolder: [github.com/Gizele1/harness-init](https://github.com/Gizele1/harness-init)
 </details>
 
+## Example Agents & Skills
+
+Ready-to-use agent and skill definitions in [`examples/`](examples/) — copy to your project's `.claude/agents/` or `.claude/skills/`.
+
+### Agents
+
+| Agent | Description |
+|-------|-------------|
+| [`text-researcher`](examples/agents/text-researcher.md) | Reads, analyzes, and extracts structured information from documents with source-traceable citations |
+| [`karpathy-tutor`](examples/agents/karpathy-tutor.md) | Deep learning tutor in Andrej Karpathy style — builds intuition first, then math, then code from scratch |
+| [`ml-from-scratch-builder`](examples/agents/ml-from-scratch-builder.md) | Implements neural network components from scratch (micrograd/nanoGPT style) without high-level APIs |
+
+### Skills
+
+| Skill | Description |
+|-------|-------------|
+| [`deep-learning-from-scratch`](examples/skills/deep-learning-from-scratch/SKILL.md) | End-to-end workflow for teaching and building deep learning from first principles |
+
+### Usage
+
+```shell
+# Copy an example agent to your project
+cp examples/agents/karpathy-tutor.md your-project/.claude/agents/
+
+# Copy an example skill to your project
+cp -r examples/skills/deep-learning-from-scratch your-project/.claude/skills/
+```
+
 ## License
 
 Apache 2.0
