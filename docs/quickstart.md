@@ -96,7 +96,7 @@ claude "Ticket FIN-427: A new corporate customer (mid-cap manufacturer, \$80M re
 
 **Failure FAQ #5 — "Too many API calls / cost anxiety"**
 **Cause:** Multi-agent teams can fan out to 5+ parallel Claude calls per task. A single complex ticket can consume 50K–200K tokens.
-**Fix:** Limit to a single task per run (don't chain `&&` multiple harness invocations), and use the `--max-turns` flag if your Claude Code version supports it. For production, gate harness invocations behind a cost-aware wrapper — see `docs/cost-controls.md` *(forthcoming)*.
+**Fix:** Limit to a single task per run (don't chain `&&` multiple harness invocations), and use the `--max-turns` flag if your Claude Code version supports it. For production, gate harness invocations behind a cost-aware wrapper — see [`docs/cost-controls.md`](./cost-controls.md).
 
 ---
 
