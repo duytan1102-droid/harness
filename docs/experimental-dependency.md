@@ -149,5 +149,5 @@ We commit to the following **observable SLA**. Missing it is grounds for filing 
 
 **Related documents:**
 - [`docs/quickstart.md`](./quickstart.md) — 5-minute install walkthrough
-- [`docs/show-hn-launch-kit.md`](./show-hn-launch-kit.md) — Public launch package
+- `docs/show-hn-launch-kit.md` *(not yet published)* — Public launch package
 - `docs/compatibility-matrix.md` *(pending P-13)* — Claude Code × harness version table
